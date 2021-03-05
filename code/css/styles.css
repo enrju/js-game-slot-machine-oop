@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+body section div {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+body section div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=styles.css.map */
