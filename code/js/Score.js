@@ -3,7 +3,7 @@ class Score{
         this.value = value;
     }
 
-    update(bid, result, resultPoints){
+    update(result, resultPoints){
         if(result === "win"){   
             this.value += resultPoints;
         }
