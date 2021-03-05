@@ -3,4 +3,8 @@ class Bid{
         this.value;
     }
 
+    set(input){
+        this.value = input.value;
+    }
+
 }
