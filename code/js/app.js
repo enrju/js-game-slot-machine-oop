@@ -2,9 +2,12 @@ class App{
     constructor(){
         this.page = new Page();
         this.bid = new Bid();
+        this.score = new Score(100);
 
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
+
+        console.log(this);
     }
 
     inputGetValue(){
