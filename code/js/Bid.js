@@ -12,4 +12,9 @@ class Bid{
         else return false;
     }
 
+    checkEmpty(){
+        if(this.value == 0) return true;
+        else return false;
+    }
+
 }
