@@ -17,4 +17,7 @@ class Bid{
         else return false;
     }
 
+    clearInput(input){
+        input.textContent = "";
+    }
 }
