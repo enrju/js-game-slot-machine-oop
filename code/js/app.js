@@ -9,6 +9,7 @@ class App{
             let cylinder = new Cylinder();
             this.cylinders.push(cylinder);
         }
+        this.stats = new Stats();
 
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
