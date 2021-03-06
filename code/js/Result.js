@@ -9,4 +9,12 @@ class Result{
 
     }
 
+    calc(bid){
+        if(this.state === "win"){
+            this.value = bid * this.winFactor;
+        }
+        else{
+            this.value = bid;
+        }
+    }
 }
