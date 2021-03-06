@@ -6,4 +6,7 @@ class Warnings{
         };
     }
 
+    getWarning(which) {
+        return this.texts.which;
+    }
 }
