@@ -7,6 +7,8 @@ class Cylinder{
     }
 
     calcPosition(){
+        let tale = this.numberRandomFrom(0, this.nTales);
+        return tale * this.heightTale;
     }
 
     animate(){
