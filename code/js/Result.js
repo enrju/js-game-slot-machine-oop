@@ -1,7 +1,7 @@
 class Result{
     constructor(factor){
-        this.state;
-        this.value;
+        this.state = "win";
+        this.value = 0;
         this.winFactor = factor;
     }
 
