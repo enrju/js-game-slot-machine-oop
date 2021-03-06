@@ -12,4 +12,9 @@ class Cylinder{
     animate(){
         
     }
+
+    numberRandomFrom(min, max) {
+        const number = Math.random() * (max - min + 1);
+        return Math.floor(number);
+    }
 }
