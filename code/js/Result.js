@@ -5,4 +5,8 @@ class Result{
         this.winFactor = factor;
     }
 
+    check(cylinders){
+
+    }
+
 }
