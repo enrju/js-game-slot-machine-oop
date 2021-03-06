@@ -3,4 +3,8 @@ class Stats{
         this.results = [];
     }
 
+    addResult(result){
+        this.results.push(result);
+    }
+
 }
