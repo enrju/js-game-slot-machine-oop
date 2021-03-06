@@ -8,4 +8,7 @@ class Cylinder{
 
     }
 
+    animate(){
+        
+    }
 }
