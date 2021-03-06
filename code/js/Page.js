@@ -11,8 +11,6 @@ class Page{
         this.pNLosses;
 
         this.set();
-
-        this.update(0, "win", 0, {nGames: 0, nWins: 0, nLosses: 0});
     }
 
     set(){

@@ -12,6 +12,8 @@ class App{
         this.stats = new Stats();
         this.warnings = new Warnings();
 
+        this.page.update(this.score.value, this.result.state, this.result.value,  this.stats.getStatSummary());
+
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
 
