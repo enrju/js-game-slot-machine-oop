@@ -2,7 +2,8 @@ class App{
     constructor(){
         this.page = new Page();
         this.bid = new Bid();
-        this.score = new Score(100);
+        this.score = new Score(100);    //start score = 100 points
+        this.result = new Result(3);    //winFactor = x 3
 
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
