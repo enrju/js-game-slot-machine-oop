@@ -22,4 +22,8 @@ body section div img {
   left: 0;
   width: 100%;
 }
+
+body section p.red {
+  color: red;
+}
 /*# sourceMappingURL=styles.css.map */
