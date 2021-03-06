@@ -25,12 +25,19 @@ class App{
     }
 
     inputGetValue(){
-        // let val = this.page.inpBid.value;
-        // console.log(val);
-
-        // if(val === "") console.log('pusty');
-        // if(val == 1) console.log('1');
-        // if(val == 0) console.log('0');
+        this.bid.set(this.page.inpBid);
+        let isEmpty = this.bid.checkEmpty();
+        let isOverbid = this.bid.checkOverbid(this.score.value);
+        
+        if(isEmpty){
+            this.page.pWarning.textContent = this.warnings.getWarning(this.warnings.index.emptybid);
+        }
+        else if(isOverbid){
+            this.page.pWarning.textContent = this.warnings.getWarning(this.warnings.index.overbid);
+        }
+        else{
+            this.page.pWarning.textContent = "";
+        }
     }
 
     clickBtnPlay(){
