@@ -4,6 +4,11 @@ class App{
         this.bid = new Bid();
         this.score = new Score(100);    //start score = 100 points
         this.result = new Result(3);    //winFactor = x 3
+        this.cylinders = [];
+        for(let i = 0; i < 3; i++){
+            let cylinder = new Cylinder();
+            this.cylinders.push(cylinder);
+        }
 
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
