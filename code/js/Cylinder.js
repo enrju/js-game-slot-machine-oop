@@ -4,4 +4,8 @@ class Cylinder{
         this.nowPosition;
     }
 
+    calcPosition(){
+
+    }
+
 }
