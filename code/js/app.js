@@ -6,12 +6,16 @@ class App{
         this.result = new Result(3);    //winFactor = x 3
         this.cylinders = [];
         for(let i = 0; i < 3; i++){
-            let cylinder = new Cylinder();
+            let cylinder = new Cylinder(60, 5);     //height of tale, n tales
             this.cylinders.push(cylinder);
         }
         this.stats = new Stats();
         this.warnings = new Warnings();
 
+        //start view
+        for(let i = 0; i < this.page.cylinders.length; i++){
+            this.page.cylinders[i].style.top = `-${this.cylinders[i].startPosition}px`;
+        }
         this.page.update(this.score.value, this.result.state, this.result.value,  this.stats.getStatSummary());
 
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
