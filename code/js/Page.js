@@ -26,14 +26,14 @@ class Page{
     }
 
     update(scorePoints, result, resultPoints, statSummary){
-        this.pScore.textContent = `Your score: ${scorePoints} points`;
+        this.pScore.innerHTML = `Your score: <span>${scorePoints}</span> points`;
         if(result === "win"){
             this.h2Result.textContent = `you ${result}: ${resultPoints} points`;
         }else{
             this.h2Result.textContent = `you ${result}: ${resultPoints} points`;
         }
-        this.pNGames.textContent = `${statSummary.nGames} games`;
-        this.pNWins.textContent = `${statSummary.nWins} wins`;
-        this.pNLosses.textContent = `${statSummary.nLosses} losses`;
+        this.pNGames.innerHTML = `<span>${statSummary.nGames}</span> games`;
+        this.pNWins.innerHTML = `<span>${statSummary.nWins}</span> wins`;
+        this.pNLosses.innerHTML = `<span>${statSummary.nLosses}</span> losses`;
     }
 }
