@@ -4,7 +4,7 @@ class Stats{
     }
 
     addResult(result){
-        this.results.push(result);
+        this.results.push(result.state);
     }
 
     getStatSummary(){
