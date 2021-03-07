@@ -1,12 +1,19 @@
+// What is does: store and manage statistics of game
 class Stats{
     constructor(){
         this.results = [];
     }
 
+    // What is does: add last result into table with all results
+    //        input: result - object with result last game (state, value)
+    //       output: set property
     addResult(result){
         this.results.push(result.state);
     }
 
+    // What is does: add last result into table with all results
+    //        input: none
+    //       output: statSummary - summary from all results
     getStatSummary(){
         let nGames = 0;
         let nWins = 0;
