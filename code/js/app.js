@@ -34,6 +34,10 @@ class App{
         }
         else if(isOverbid){
             this.page.pWarning.textContent = this.warnings.getWarning(this.warnings.index.overbid);
+            if(this.score.value == 0){
+                alert("GAME OVER");
+                document.location.reload();
+            }
         }
         else{
             this.page.pWarning.textContent = "";
@@ -50,6 +54,10 @@ class App{
         }
         else if(isOverbid){
             this.page.pWarning.textContent = this.warnings.getWarning(this.warnings.index.overbid);
+            if(this.score.value == 0){
+                alert("GAME OVER");
+                document.location.reload();
+            }
         }
         else{
             this.page.pWarning.textContent = "";
