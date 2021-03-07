@@ -1,3 +1,4 @@
+// What is does: store and manage handles to elements HTML from page (connect them with js)
 class Page{
     constructor(){
         this.cylinders;
@@ -13,6 +14,9 @@ class Page{
         this.set();
     }
 
+    // What is does: connect elements HTML with properties
+    //        input: none
+    //       output: set property
     set(){
         this.cylinders = document.querySelectorAll("img.cylinder");
         this.inpBid = document.querySelector("input.bid");
@@ -25,6 +29,12 @@ class Page{
         this.pNLosses = document.querySelector("p.nLosses");
     }
 
+    // What is does: update elements HTML on page
+    //        input: scorePoints - sum of points
+    //               result - last result of game ("win","loss")
+    //               resultPoints - last result of games in points
+    //               statSummary - statistics of game
+    //       output: none
     update(scorePoints, result, resultPoints, statSummary){
         this.pScore.innerHTML = `Your score: <span>${scorePoints}</span> points`;
         if(result === "win"){
