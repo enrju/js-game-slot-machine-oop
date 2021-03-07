@@ -1,10 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: arial;
 }
 
 body {
+  max-width: 400px;
+  margin: 0 auto;
   text-align: center;
+}
+
+body h1 {
+  margin: 20px 0 10px;
+}
+
+body section {
+  margin: 5px;
+  padding: 10px;
+  background-color: royalblue;
 }
 
 body section div {
@@ -12,8 +27,10 @@ body section div {
   display: inline-block;
   width: 100px;
   height: 60px;
-  border: 2px solid black;
+  border: 3px solid #213674;
   overflow: hidden;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 body section div img {
@@ -23,7 +40,35 @@ body section div img {
   width: 100%;
 }
 
+body section input {
+  width: 100px;
+  padding: 5px;
+  border: 3px solid #213674;
+  font-size: 20px;
+}
+
+body section button {
+  padding: 5px 15px;
+  border: 3px solid #213674;
+  background-color: royalblue;
+  font-size: 20px;
+}
+
+body section button:hover {
+  cursor: pointer;
+}
+
+body section h2 {
+  margin-bottom: 15px;
+}
+
+body section p span {
+  font-weight: bold;
+}
+
 body section p.red {
+  margin-top: 10px;
   color: red;
+  background-color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */
