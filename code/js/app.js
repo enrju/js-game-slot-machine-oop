@@ -1,9 +1,10 @@
+// What is does: application - store and manage objects and control application
 class App{
     constructor(){
         this.page = new Page();
         this.bid = new Bid();
-        this.score = new Score(100);    //start score = 100 points
-        this.result = new Result(20);    //winFactor = x 20
+        this.score = new Score(100);                //start score = 100 points
+        this.result = new Result(20);               //winFactor = x 20
         this.cylinders = [];
         for(let i = 0; i < 3; i++){
             let cylinder = new Cylinder(60, 5);     //height of tale, n tales
@@ -22,6 +23,10 @@ class App{
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
     }
 
+    // What is does: callback for event "input" for <input>
+    //               check that is <input> empty or overbid
+    //        input: none
+    //       output: none
     inputGetValue(){
         this.bid.set(this.page.inpBid);
         let isEmpty = this.bid.checkEmpty();
@@ -42,6 +47,10 @@ class App{
         }
     }
 
+    // What is does: callback for event "click" for <button>
+    //               activities after run game (click "Play")
+    //        input: none
+    //       output: none
     clickBtnPlay(){
         this.bid.set(this.page.inpBid);
         let isEmpty = this.bid.checkEmpty();
@@ -63,7 +72,7 @@ class App{
             for(let i = 0; i < this.page.cylinders.length; i++){
                 this.cylinders[i].nowPosition = this.cylinders[i].calcPosition();
 
-                //run animation
+                //here should be animation, but is obnly set end positions of cylinders
                 this.page.cylinders[i].style.top = `-${this.cylinders[i].nowPosition}px`;
             }
 
@@ -73,7 +82,7 @@ class App{
 
             this.stats.addResult(this.result);
 
-            //for future need in animation
+            //need for animation - leave it
             for(let i = 0; i < this.page.cylinders.length; i++){
                 this.cylinders[i].startPosition = this.cylinders[i].nowPosition;
             }
