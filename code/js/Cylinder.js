@@ -7,12 +7,12 @@ class Cylinder{
     }
 
     calcPosition(){
-        let tale = this.numberRandomFrom(0, this.nTales);
+        let tale = this.numberRandomFrom(0, this.nTales - 1);
         return tale * this.heightTale;
     }
 
     animate(){
-        
+
     }
 
     numberRandomFrom(min, max) {
