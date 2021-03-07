@@ -3,12 +3,12 @@ class Score{
         this.value = value;
     }
 
-    update(result, resultPoints){
-        if(result === "win"){   
-            this.value += resultPoints;
+    update(result){
+        if(result.state === "win"){   
+            this.value += result.value;
         }
         else{
-            this.value -= resultPoints;
+            this.value -= result.value;
         }
     }
 }
