@@ -41,6 +41,38 @@ class App{
     }
 
     clickBtnPlay(){
+        this.bid.set(this.page.inpBid);
+        let isEmpty = this.bid.checkEmpty();
+        let isOverbid = this.bid.checkOverbid(this.score.value);
 
+        if(isEmpty){
+            this.page.pWarning.textContent = this.warnings.getWarning(this.warnings.index.emptybid);
+        }
+        else if(isOverbid){
+            this.page.pWarning.textContent = this.warnings.getWarning(this.warnings.index.overbid);
+        }
+        else{
+            this.page.pWarning.textContent = "";
+
+            for(let i = 0; i < this.page.cylinders.length; i++){
+                this.cylinders[i].nowPosition = this.cylinders[i].calcPosition();
+
+                //run animation
+                this.page.cylinders[i].style.top = `-${this.cylinders[i].nowPosition}px`;
+            }
+
+            this.result.check(this.cylinders, this.bid);
+
+            this.score.update(this.result);
+
+            this.stats.addResult(this.result);
+
+            //for future need in animation
+            for(let i = 0; i < this.page.cylinders.length; i++){
+                this.cylinders[i].startPosition = this.cylinders[i].nowPosition;
+            }
+
+            this.page.update(this.score.value, this.result.state, this.result.value,  this.stats.getStatSummary());
+        }
     }
 }
