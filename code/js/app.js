@@ -3,7 +3,7 @@ class App{
         this.page = new Page();
         this.bid = new Bid();
         this.score = new Score(100);    //start score = 100 points
-        this.result = new Result(3);    //winFactor = x 3
+        this.result = new Result(20);    //winFactor = x 20
         this.cylinders = [];
         for(let i = 0; i < 3; i++){
             let cylinder = new Cylinder(60, 5);     //height of tale, n tales
@@ -20,8 +20,6 @@ class App{
 
         this.page.inpBid.addEventListener("input", this.inputGetValue.bind(this));
         this.page.btnPlay.addEventListener("click", this.clickBtnPlay.bind(this));
-
-        console.log(this);
     }
 
     inputGetValue(){
